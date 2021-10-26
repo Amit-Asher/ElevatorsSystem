@@ -5,10 +5,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Log {
+    /* Design Pattern - Singleton */
     private static final String FILE_NAME = "Elevators.log";
     private final Object IOLock = new Object();
     private boolean printToConsole = false;
-
+    
     private Log() throws IOException {
         try {
             File logFile = new File(FILE_NAME);
